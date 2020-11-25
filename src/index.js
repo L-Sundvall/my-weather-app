@@ -28,7 +28,7 @@ function farenheitTemperature() {
 function showWeather(response){
     document.querySelector("#current-head-city").innerHTML = response.data.name;
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
-    console.log(response.data); 
+    document.querySelector("#conditions").innerHTML = response.data.weather[0].description; 
     }
 
 function searchCity(event) {
