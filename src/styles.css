@@ -95,10 +95,12 @@ p {
   transition: all 200ms ease;
 }
 .Search-button {
-  opacity: 0.5;
-  color: #5f6368;
-  border: solid black;
+  margin: 10px;
+  background-color: rgb(15, 84, 168);
+  border: solid #fff;
+  color: #fff;
   border-radius: 4px;
+  padding: 5px, 7px, 5px, 7px;
 }
 
 .Search-button:hover {
@@ -106,6 +108,9 @@ p {
   transition: all 200ms ease;
 }
 #search-input {
+  display: block;
+  margin: 10px;
+  width: 300px;
   border-radius: 6px;
   opacity: 0.5;
 }
