@@ -8,18 +8,27 @@
   font-family: "Oswald", sans-serif;
 }
 
-.currently {
-  text-align: right;
-  font-size: 29px;
+#current-head-city {
+  text-align: left;
+  margin-top: 30px;
+  padding: 0px;
+  font-size: 20px;
+}
+#time {
+  text-align: left;
+  font-size: 14px;
+}
+#conditions {
+  font-size: 14px;
 }
 .current-temp {
-  font-size: 29px;
+  font-size: 25px;
   color: #5f6368;
   text-align: left;
 }
 
 .head-emoji {
-  font-size: 70px;
+  font-size: 60px;
   text-align: left;
 }
 .day-emoji {
@@ -41,9 +50,9 @@ p {
 }
 #celsius {
   position: relative;
-  bottom: 12px;
+  bottom: 10px;
   color: #6e8097;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #celsius:hover {
@@ -52,10 +61,15 @@ p {
 }
 #farenheit {
   position: relative;
-  bottom: 12px;
-  right: 5px;
+  bottom: 10px;
   color: #6e8097;
-  font-size: 14px;
+  font-size: 12px;
+}
+#slash {
+  position: relative;
+  bottom: 10px;
+  left: 3px;
+  font-size: 16px;
 }
 
 #farenheit:hover {

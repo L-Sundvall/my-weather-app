@@ -28,6 +28,7 @@ function farenheitTemperature() {
 function showWeather(response){
     document.querySelector("#current-head-city").innerHTML = response.data.name;
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
+    console.log(response.data); 
     }
 
 function searchCity(event) {
@@ -36,6 +37,7 @@ function searchCity(event) {
     let city =document.querySelector("#search-input").value;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showWeather);
+
       }
 
 function currentLocation(event){
