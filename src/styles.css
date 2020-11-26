@@ -18,7 +18,7 @@
   text-align: left;
   font-size: 14px;
 }
-#conditions {
+.weather-conditions {
   font-size: 14px;
 }
 .current-temp {
@@ -28,7 +28,7 @@
 }
 
 .head-emoji {
-  font-size: 60px;
+  font-size: 70px;
   text-align: left;
 }
 .day-emoji {
@@ -113,4 +113,6 @@ p {
   border-radius: 6px;
   opacity: 0.5;
 }
-
+.weekday {
+  font-size: 12px;
+}
