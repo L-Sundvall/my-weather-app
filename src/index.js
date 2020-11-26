@@ -29,17 +29,20 @@ function showWeather(response){
     document.querySelector("#current-head-city").innerHTML = response.data.name;
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
     document.querySelector("#conditions").innerHTML = response.data.weather[0].description; 
-    document.querySelector("#wind-speed").innerHTML = `Humidity: ${response.data.wind.speed} km/h`;
-    document.querySelector("#humidity").innerHTML =`Windspeed: ${response.data.main.humidity} %`;
+    document.querySelector("#wind-speed").innerHTML = `wind: ${response.data.wind.speed} km/h`;
+    document.querySelector("#humidity").innerHTML =`Humidity: ${response.data.main.humidity} %`;
+}
+function search (city) {
+let apiKey = "7e499109a815c2c14463aa26aad21ebb";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=
+${city}&appid=${apiKey}&units=metric`;
+ axios.get(apiUrl).then(showWeather);
 }
 
 function searchCity(event) {
     event.preventDefault();
-    let apiKey = "7e499109a815c2c14463aa26aad21ebb";
     let city =document.querySelector("#search-input").value;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(showWeather);
-
+    search(city);
       }
 
 function currentLocation(event){
@@ -68,7 +71,7 @@ function searchCurrentLocation (position) {
     let cityForm= document.querySelector("#search-city");
     cityForm.addEventListener("submit", searchCity);
 
-
+search ("Stockholm");
 
 
 
