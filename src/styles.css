@@ -42,9 +42,12 @@
   text-align: center;
 }
 p {
-  margin-left: 400px;
-  margin-top: 15px;
   color: #96a3c5;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Oswald", sans-serif;
+}
+#code-link {
+  color: #86cc4a;
   font-family: "Montserrat", sans-serif;
   font-family: "Oswald", sans-serif;
 }
