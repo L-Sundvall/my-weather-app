@@ -64,7 +64,7 @@ function searchCurrentLocation (position) {
     let hour = currentTime.getHours();
     let currentMinuets = document.querySelector("#current-minuets");
     let minuets = currentTime.getMinutes();
-    currentHour.innerHTML = hour;
+    currentHour.innerHTML = `${hour} :`;
     currentMinuets.innerHTML = minuets;
 
 

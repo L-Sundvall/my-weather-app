@@ -28,40 +28,36 @@
             border: solid #d6d8dc;
           "
         >
+          <h1>
+            <div id="current-head-city"></div>
+          </h1>
+
           <div class="card-body">
             <div class="row">
-              <div class="col-4">
+              <div class="col-6">
                 <h4 class="card-title">
-                  <span class="current-city" id="current-head-city">
-                    Stockholm</span
-                  >
+                  <ul id="time">
+                    <li id="current-day"></li>
+                    <li>
+                      <span id="current-hour"> </span>
+                      <span id="current-minuets"></span>
+                    </li>
+                  </ul>
+                  <span class="current-temp"></span>
+                  <span id="head-emoji">⛅</span>
                   <br />
-                  <span id="time">
-                    <span id="current-day"> </span>
-                    <br />
-                    <span id="current-hour"> </span>
-                    :
-                    <span id="current-minuets"></span>
-                  </span>
-                </h4>
-              </div>
-              <div class="col-3">
-                <h4 class="current-temp">
                   <span id="temperature"> </span>
-
                   <a href="#" id="celsius"> °C </a> <span id="slash"> |</span>
                   <a href="#" id="farenheit">°F</a>
-
-                  <br />
-                  <span class="weather-conditions">
-                    <footer id="conditions"></footer>
-                    <footer id="wind-speed"></footer>
-                    <footer id="humidity"></footer>
-                  </span>
                 </h4>
               </div>
-              <div class="col-3">
-                <h4 class="head-emoji">⛅</h4>
+
+              <div class="col-6">
+                <ul id="weather-list">
+                  <li id="conditions"></li>
+                  <li id="wind-speed"></li>
+                  <li id="humidity"></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -124,19 +120,9 @@
             </div>
 
             <div class="col-sm-2">
-              <footer class="day4 days">
-                <h6>
-                  <span class="weekday">Friday</span> <br /><br />
-                  <footer class="day-emoji">⛅</footer>
-                  <br />14 °C
-                </h6>
-              </footer>
-            </div>
-
-            <div class="col-sm-2">
               <footer class="day5 days">
                 <h6>
-                  <span class="weekday"> Saturday</span> <br /><br />
+                  <span class="weekday"> Friday</span> <br /><br />
                   <footer class="day-emoji">⛅</footer>
                   <br />14 °C
                 </h6>
@@ -145,10 +131,13 @@
           </div>
         </div>
       </div>
-
       <p>
         <br />
-        <a href="https://github.com/L-Sundvall/my-weather-app" target="_blank" id="code-link">
+        <a
+          href="https://github.com/L-Sundvall/my-weather-app"
+          target="_blank"
+          id="code-link"
+        >
           Open source code</a
         >
         by Linda Sundvall
