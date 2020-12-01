@@ -31,29 +31,30 @@
           <h1>
             <div id="current-head-city"></div>
           </h1>
-
           <div class="card-body">
             <div class="row">
-              <div class="col-6">
-                <h4 class="card-title">
-                  <ul id="time">
-                    <li id="current-day"></li>
-                    <li>
-                      <span id="current-hour"> </span>
-                      <span id="current-minuets"></span>
-                    </li>
-                  </ul>
-                  <span class="current-temp"></span>
-                  <span id="head-emoji">⛅</span>
-                  <br />
+              <div class="col-4">
+                <ul id="time">
+                  <li id="current-day"></li>
+                  <li>
+                    <span id="current-hour"> </span>
+                    <span id="current-minuets"></span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-4">
+                <span class="current-temp">
+                  <span id="head-emoji">⛅ </span>
+
                   <span id="temperature"> </span>
                   <a href="#" id="celsius"> °C </a> <span id="slash"> |</span>
                   <a href="#" id="farenheit">°F</a>
-                </h4>
+                </span>
               </div>
 
-              <div class="col-6">
-                <ul id="weather-list">
+              <div class="col-4">
+                <ul class="weather-list">
                   <li id="conditions"></li>
                   <li id="wind-speed"></li>
                   <li id="humidity"></li>

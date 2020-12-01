@@ -14,27 +14,28 @@
   font-size: 20px;
 }
 #time {
+  display: block;
+  margin: 0 auto;
   list-style: none;
   text-decoration: none;
-  text-align: left;
   font-size: 14px;
 }
 
-#weather-list {
+.weather-list {
   list-style: none;
   text-decoration: none;
   font-size: 12px;
+  padding-left: 20px;
 }
 .current-temp {
+  display: block;
+  margin: 0 auto;
   font-size: 30px;
   color: #5f6368;
 }
 
-#head-emoji {
-  font-size: 50px;
-}
 .day-emoji {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .days {
@@ -69,12 +70,6 @@ p {
   bottom: 10px;
   color: #6e8097;
   font-size: 12px;
-}
-#slash {
-  position: relative;
-  bottom: 10px;
-  left: 3px;
-  font-size: 16px;
 }
 
 #farenheit:hover {
