@@ -52,6 +52,11 @@ p {
   font-family: "Montserrat", sans-serif;
   font-family: "Oswald", sans-serif;
 }
+#head-emoji {
+  width: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+}
 #celsius {
   position: relative;
   bottom: 12px;
