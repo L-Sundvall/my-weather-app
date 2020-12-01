@@ -13,17 +13,15 @@
   margin-top: 30px;
   font-size: 30px;
 }
-#time {
-  display: block;
-  margin: 0 auto;
-  list-style: none;
-  text-decoration: none;
-  font-size: 14px;
-}
 
-.weather-list {
+li {
   list-style: none;
   text-decoration: none;
+}
+li::first-letter {
+  text-transform: capitalize;
+}
+.weather-list {
   font-size: 12px;
   padding-left: 20px;
 }
@@ -56,7 +54,7 @@ p {
 }
 #celsius {
   position: relative;
-  bottom: 10px;
+  bottom: 12px;
   color: #6e8097;
   font-size: 12px;
 }
@@ -65,9 +63,14 @@ p {
   text-decoration: none;
   color: #5f6368;
 }
+#slash {
+  position: relative;
+  bottom: 12px;
+  font-size: 14px;
+}
 #farenheit {
   position: relative;
-  bottom: 10px;
+  bottom: 12px;
   color: #6e8097;
   font-size: 12px;
 }

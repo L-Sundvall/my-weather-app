@@ -60,19 +60,28 @@ function searchCurrentLocation (position) {
 
     let locationButton = document.querySelector("#current-button");
     locationButton.addEventListener("click", currentLocation);
+   
+   function getTime() {
     let currentHour = document.querySelector("#current-hour");
     let hour = currentTime.getHours();
+    if (hour <10) {
+      hour = `0${hour}`
+    }
     let currentMinuets = document.querySelector("#current-minuets");
     let minuets = currentTime.getMinutes();
+    if (minuets < 10) {
+      minuets = `0${minuets}`
+    }
     currentHour.innerHTML = `${hour} :`;
     currentMinuets.innerHTML = minuets;
+}
 
 
     let cityForm= document.querySelector("#search-city");
     cityForm.addEventListener("submit", searchCity);
 
 search ("Stockholm");
-
+getTime()
 
 
 
