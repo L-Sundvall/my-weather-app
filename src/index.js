@@ -87,7 +87,17 @@ let day5 = new Date(response.data.list[39].dt_txt);
     let dayFive = document.querySelector("#weekday5")
     dayFive.innerHTML = getDay5; 
           }
-    function search (city) {
+
+ function showForecastIcon (response) {
+   
+ }
+
+          function forecastIcon(city) {
+          let apiKey = a68c08d6caf644959c8cbd9c1dcae741
+          let apiUrl =`https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=${apiKey}`;
+          axios.get(apiUrl).then(showForecastIcon);
+}
+function search (city) {
     let apiKey = "7e499109a815c2c14463aa26aad21ebb";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=
     ${city}&appid=${apiKey}&units=metric`;

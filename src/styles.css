@@ -116,9 +116,10 @@ p {
   padding: 5px;
 }
 .icon {
-  max-width: 45px;
+  max-width: 50px;
+  padding: 5px;
 }
-.days{
-  
-
+.days {
+  margin-left: 30px;
+  margin-right: -60px;
 }
