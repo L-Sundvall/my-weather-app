@@ -17,6 +17,8 @@ formatDate();
 
 
 function showWeather(response){
+   defaultCelsiusTemperature = response.data.main.temp;
+
     document.querySelector("#current-head-city").innerHTML = response.data.name;
     document.querySelector("#temperature").innerHTML = Math.round(defaultCelsiusTemperature);
     document.querySelector("#conditions").innerHTML = response.data.weather[0].description; 
@@ -25,11 +27,9 @@ function showWeather(response){
     let icon = document.querySelector("#head-emoji");
     icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     icon.setAttribute("alt" , response.data.weather[0].description);
-    defaultCelsiusTemperature = response.data.main.temp;
-    }
+       }
 
     function showForecast(response) {
-      console.log(response.data);
       document.querySelector("#day-1-temp").innerHTML = Math.round(response.data.list[7].main.temp);
      let icon = document.querySelector("#day-emoji1");
        icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list[7].weather[0].icon}@2x.png`);
@@ -72,40 +72,32 @@ let day3 = new Date(response.data.list[23].dt_txt);
        iconFour.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list[31].weather[0].icon}@2x.png`);
     iconFour.setAttribute("alt" , response.data.list[31].weather[0].description);
 
-let day4 = new Date(response.data.list[31].dt_txt);
-      let getDay4 = days[day4.getDay()];
+    let day4 = new Date(response.data.list[31].dt_txt);
+    let getDay4 = days[day4.getDay()];
     let dayFour = document.querySelector("#weekday4")
     dayFour.innerHTML = getDay4; 
 
     document.querySelector("#day-5-temp").innerHTML = Math.round(response.data.list[39].main.temp);
-     let iconFive = document.querySelector("#day-emoji5");
-       iconFive.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list[39].weather[0].icon}@2x.png`);
+    let iconFive = document.querySelector("#day-emoji5");
+    iconFive.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list[39].weather[0].icon}@2x.png`);
     iconFive.setAttribute("alt" , response.data.list[39].weather[0].description);
 
-let day5 = new Date(response.data.list[39].dt_txt);
-      let getDay5 = days[day5.getDay()];
+    let day5 = new Date(response.data.list[39].dt_txt);
+    let getDay5 = days[day5.getDay()];
     let dayFive = document.querySelector("#weekday5")
     dayFive.innerHTML = getDay5; 
           }
-
- function showForecastIcon (response) {
-   
- }
-
-          function forecastIcon(city) {
-          let apiKey = a68c08d6caf644959c8cbd9c1dcae741
-          let apiUrl =`https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=${apiKey}`;
-          axios.get(apiUrl).then(showForecastIcon);
-}
-function search (city) {
+          
+    function search (city) {
     let apiKey = "7e499109a815c2c14463aa26aad21ebb";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=
     ${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(showWeather);
+    axios.get(apiUrl).then(showWeather);
 
     apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=
     ${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(showForecast);
+
+    axios.get(apiUrl).then(showForecast);
 
   }
 
