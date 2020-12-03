@@ -21,7 +21,7 @@ li::first-letter {
   text-transform: capitalize;
 }
 .weather-list {
-  font-size: 12px;
+  font-size: 14px;
   padding-left: 20px;
 }
 .current-temp {
