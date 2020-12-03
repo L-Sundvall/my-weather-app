@@ -88,7 +88,7 @@ p {
   margin-left: 40px;
   background-color: #86cc4a;
   padding: 5px;
-  border: solid #7fba00;
+  border: solid #86cc4a;
   color: #fff;
   border-radius: 6px;
 }
@@ -97,8 +97,8 @@ p {
   transition: all 200ms ease;
 }
 .Search-button {
-  background-color: rgb(15, 84, 168);
-  border: solid #fff;
+  background-color: #e635a2;
+  border: solid #fac0e5;
   color: #fff;
   border-radius: 6px;
   padding: 7px, 7px;
@@ -107,6 +107,7 @@ p {
 #search-input {
   margin-left: 40px;
   width: 250px;
+  border: solid #e635a2;
   border-radius: 6px;
   opacity: 0.5;
 }
@@ -122,4 +123,5 @@ p {
 .days {
   margin-left: 30px;
   margin-right: -60px;
+  background-color: #f7d5ea;
 }
