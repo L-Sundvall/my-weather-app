@@ -46,6 +46,7 @@ function showWeather(response){
       let getDay = days[day.getDay()];
     let dayOne = document.querySelector("#weekday1")
     dayOne.innerHTML = getDay; 
+   
 
       document.querySelector("#day-2-temp").innerHTML = Math.round(response.data.list[15].main.temp);
      let iconTwo = document.querySelector("#day-emoji2");
@@ -56,6 +57,7 @@ let day2 = new Date(response.data.list[15].dt_txt);
       let getDay2 = days[day2.getDay()];
     let dayTwo = document.querySelector("#weekday2")
     dayTwo.innerHTML = getDay2; 
+
 
      document.querySelector("#day-3-temp").innerHTML = Math.round(response.data.list[23].main.temp);
      let iconThree = document.querySelector("#day-emoji3");
