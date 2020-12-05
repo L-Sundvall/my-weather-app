@@ -83,7 +83,7 @@ let day3 = new Date(response.data.list[23].dt_txt);
     let iconFive = document.querySelector("#day-emoji5");
     iconFive.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list[39].weather[0].icon}@2x.png`);
     iconFive.setAttribute("alt" , response.data.list[39].weather[0].description);
-
+console.log (response.data.list[39].main.temp);
     let day5 = new Date(response.data.list[39].dt_txt);
     let getDay5 = days[day5.getDay()];
     let dayFive = document.querySelector("#weekday5")
@@ -96,6 +96,8 @@ let day3 = new Date(response.data.list[23].dt_txt);
     ${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showWeather);
 
+  
+      
     apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=
     ${city}&appid=${apiKey}&units=metric`;
 
@@ -120,7 +122,10 @@ function searchCurrentLocation (position) {
     let longitude = position.coords.longitude
     let apiUrlPosition = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     axios.get(apiUrlPosition).then(showWeather);
-    }
+
+    apiUrlPosition=`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrlPosition).then(showForecast);  
+  }
 
  
    
